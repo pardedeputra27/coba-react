@@ -2,16 +2,16 @@ import Header from "./components/Header";
  
 function App() {
  
-  const clickMe = () => {
-    console.log('Clicked');
+  const clickMe = (name) => {
+    console.log('Hello: '+ name);
   }
  
   return (
     <div>
       <Header />
-      <button onClick={ clickMe }>Click Me</button>
+      <button onClick={ () => clickMe('Putra Pardede') }>Click Me</button>
     </div>
   );
 }
  
-export default App;
+export default App
