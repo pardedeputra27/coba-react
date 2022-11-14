@@ -1,17 +1,18 @@
-import Header from "./components/Header";
+import { useState } from "react"
  
 function App() {
+  const [title, setTitle] = useState("Hello World");
  
-  const clickMe = (name) => {
-    console.log('Hello: '+ name);
+  const changeTitle = () => {
+    setTitle("Title Changed");
   }
  
   return (
     <div>
-      <Header />
-      <button onClick={ () => clickMe('Putra Pardede') }>Click Me</button>
+      <h1>{ title }</h1>
+      <button onClick={ changeTitle }>Change Title</button>
     </div>
   );
 }
  
-export default App
+export default App;
