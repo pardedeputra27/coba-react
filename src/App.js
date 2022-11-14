@@ -1,5 +1,8 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import ProductList from "./components/ProductList";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import About from "./components/About";
+import Contact from "./components/Contact";
  
 function App() {
   const [products, setProducts] = useState([
@@ -15,13 +18,21 @@ function App() {
     setProducts(newProducts);
   }
  
-  useEffect(() => {
-    console.log('Use Effect Running');
-  });
- 
   return (
     <div>
-      <ProductList products={ products } deleteProduct={ deleteProduct } />
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <ProductList products={ products } deleteProduct={ deleteProduct } />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
