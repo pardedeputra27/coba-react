@@ -4,11 +4,17 @@ import MyButton from './components/MyButton';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
+//use useState
+import React,{useState} from 'react';
+
 const App = () => {
     const navHeading = "Navigation Bar";
     const navText = "Putra Pardede";
+
+    const [getNavbarValue,setNavbarValue] = useState('');
+
     const cliked = () =>{
-        return alert("Button sudah dipencet");
+        setNavbarValue('Putra Pardede');
     }
     // menggunakan function
     const paragraf = ()=> {
@@ -27,7 +33,7 @@ const App = () => {
       <header className="App-header">
         <Navbar test={navText} navHeading ={navHeading} />
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Hellow CUY 😂</p>
+        <p>Hellow {!getNavbarValue?'Cuy':getNavbarValue} 😂</p>
         <MyButton klik ={cliked}/>
         <Footer paragraf ={paragraf} />
       </header>
