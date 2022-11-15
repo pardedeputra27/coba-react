@@ -1,12 +1,14 @@
-const Navbar = () =>{
+const Navbar = (props) =>{
+
     return (
         <div>
+            <h1>{props.navHeading}</h1>
             <ul>
-                <li><a href="">satu</a></li>
-                <li>dua</li>
-                <li>tiga</li>
-                <li>empat</li>
-                <li>Lima</li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">{props.test}</a></li>
+      
             </ul>
         </div>
     )

@@ -1,7 +1,7 @@
-const MyButton = () =>{
+const MyButton = (props) =>{
    return (
      <div>
-        <button> Clicked Me</button>
+        <button onClick={()=>props.klik()}> Clicked Me</button>
      </div>
    )
 }
