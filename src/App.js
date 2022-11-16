@@ -12,6 +12,7 @@ const App = () => {
     const navText = "Putra Pardede";
 
     const [getNavbarValue,setNavbarValue] = useState('');
+    const [getPacar,setPacar] = useState(0);
 
     const cliked = () =>{
         setNavbarValue('Putra Pardede');
@@ -31,6 +32,9 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
+          <h1>Saya Miliki {getPacar} Anjing</h1>
+          <button onClick={()=>setPacar((prev)=>(prev>=0)? prev+1 :prev)}>Tambah</button>
+          <button onClick={()=>setPacar((prev)=>(prev<=0)? prev :prev-1)}>Kurang</button>
         <Navbar test={navText} navHeading ={navHeading} />
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hellow {!getNavbarValue?'Cuy':getNavbarValue} 😂</p>
