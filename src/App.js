@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 //use useState
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 
 const App = () => {
     const navHeading = "Navigation Bar";
@@ -13,6 +13,7 @@ const App = () => {
 
     const [getNavbarValue,setNavbarValue] = useState('');
     const [getPacar,setPacar] = useState(0);
+    const [namaPacar,setNamaPacar] = useState('');
 
     const cliked = () =>{
         setNavbarValue('Putra Pardede');
@@ -29,9 +30,19 @@ const App = () => {
     } 
     // menggunakan  variable
     //const paragraf = <i>Mantap bang</i>;
+
+    useEffect(()=>{
+      if(getPacar==2){
+        setNamaPacar('Halimah,Angel');
+      }else{
+        setNamaPacar('jomblo');
+      }
+    },[getPacar])
+
   return (
     <div className="App">
       <header className="App-header">
+          <h5>Nama Pacar Saya adalah  {namaPacar}</h5>
           <h1>Saya Miliki {getPacar} Anjing</h1>
           <button onClick={()=>setPacar((prev)=>(prev>=0)? prev+1 :prev)}>Tambah</button>
           <button onClick={()=>setPacar((prev)=>(prev<=0)? prev :prev-1)}>Kurang</button>
