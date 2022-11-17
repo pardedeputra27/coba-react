@@ -1,26 +1,21 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 
-import React, { useRef } from "react";
+import React from "react";
 
-function Mailbox(props) {
-  const unreadMessages = props.unreadMessages;
-  return (
-    <div>
-      <h1>Hello!</h1>
-      {(unreadMessages.length > 0) ? 
-        <h2> You have {unreadMessages.length} unread messages. </h2> : <h1>oke</h1>
-      }
-    </div>
-  );
-}
+
+
 
 function App() {
-  const messages = ["React", "Re: React", "Re:Re: React","syalom"];
+  const numbers = [1, 2, 3, 4, 5];
+  const listItems = numbers.map((number) =>
+  <li key={number.toString()}>    {number}
+    </li>
+  );
   return (
-    <>
-      <Mailbox unreadMessages={messages} />
-    </>
+    <ul>
+      {listItems}
+    </ul>
   );
 }
 
