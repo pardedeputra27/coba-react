@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
-import FormSubmit from './components/TodoList';
+import API from './components/CobaAPI';
 
 
 const App = () => {
@@ -9,7 +9,7 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <FormSubmit />
+        <API />
       </header>
     </div>
   );
