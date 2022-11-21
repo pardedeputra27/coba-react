@@ -1,28 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
-import Time from './components/Time';
-import TimerClass from './components/TimerClass';
-
+import ToogleFunction from './components/HandleEvent';
+import ToogleClass from './components/HandleEvent2';
+import FormSubmit from './components/HandleEvent3';
 
 const App = () => {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        < Time/>
-        <TimerClass  start="0"/>
-        <TimerClass  start="7"/>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <ToogleFunction />
+        <ToogleClass />
+        <FormSubmit />
+
       </header>
     </div>
   );
