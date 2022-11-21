@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/pardedeputra27/coba-react/static/css/main.073c9b0a.css",
+    "main.js": "/pardedeputra27/coba-react/static/js/main.14c6fe21.js",
+    "static/js/787.b2b4f2c1.chunk.js": "/pardedeputra27/coba-react/static/js/787.b2b4f2c1.chunk.js",
+    "static/media/logo.svg": "/pardedeputra27/coba-react/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/pardedeputra27/coba-react/index.html",
+    "main.073c9b0a.css.map": "/pardedeputra27/coba-react/static/css/main.073c9b0a.css.map",
+    "main.14c6fe21.js.map": "/pardedeputra27/coba-react/static/js/main.14c6fe21.js.map",
+    "787.b2b4f2c1.chunk.js.map": "/pardedeputra27/coba-react/static/js/787.b2b4f2c1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.14c6fe21.js"
+  ]
+}
