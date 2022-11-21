@@ -15,16 +15,17 @@ class TimerClass extends React.Component{
 
     componentDidMount(){
         //setInterval(fungsi,timerDalamMilliSecond)
-        this.addInterval = setInterval(()=> this.increase(),1000);
+        this.addInterval = setInterval(()=> this.buatJam(),1000);
     }
     componentWillUnmount(){
         //clearInterval(nameInterval);
         clearInterval(this.addInterval);
     }
-    increase(){
+    buatJam(){
         //update state setiap detik
         this.setState((state,props)=>({
-            time: parseInt(state.time)+1
+            time: parseInt(state.time)+1,
+            date: new Date()
         })
         );
     }
@@ -32,6 +33,7 @@ class TimerClass extends React.Component{
         return (
           <div>
             <h2>It is {this.state.time} Detik.</h2>
+            <h2>{this.state.date.toLocaleDateString} </h2>
           </div>
         );
       }
