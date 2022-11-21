@@ -26,9 +26,9 @@ class API extends React.Component{
             <div>
                 {
                     items.map((data,index)=>
-                    <div>
-                    <li key={index}>Name : {data.name}-({data.email})</li>
-                    <li key={index}>Address :{data.address.street}</li>
+                    <div key={index}>
+                    <li >Name : {data.name}-({data.email})</li>
+                    <li >Address :{data.address.street}</li>
                     </div>
                     )
                 }
