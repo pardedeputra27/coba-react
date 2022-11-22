@@ -1,5 +1,7 @@
 import './App.css';
 import FilterableProductTable from './components/staticVersion/FilterableProductTable';
+import FilterableProductTable1 from './components/stateVersion/FilterableProductTable';
+
 
 function App() {
   const PRODUCTS = [
@@ -12,7 +14,9 @@ function App() {
   ];
   return (
     <div className='body'>
-        <FilterableProductTable products={PRODUCTS} />
+        {/* <FilterableProductTable products={PRODUCTS} /> */}
+        <FilterableProductTable1 products={PRODUCTS} />
+        
     </div>
   );
 }
