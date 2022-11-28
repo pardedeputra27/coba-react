@@ -1,6 +1,9 @@
 import './App.css';
-import FilterableProductTable from './components/staticVersion/FilterableProductTable';
+//import FilterableProductTable from './components/staticVersion/FilterableProductTable';
 import FilterableProductTable1 from './components/stateVersion/FilterableProductTable';
+//import OuterClickExample from './components/Select';
+//import BlurExample from './components/Blur';
+import CommentList from './components/CommentList';
 
 
 function App() {
@@ -16,6 +19,9 @@ function App() {
     <div className='body'>
         {/* <FilterableProductTable products={PRODUCTS} /> */}
         <FilterableProductTable1 products={PRODUCTS} />
+        {/* <OuterClickExample /> */}
+        {/* <BlurExample /> */}
+        
         
     </div>
   );
