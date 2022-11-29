@@ -1,5 +1,6 @@
 import './App.css';
 import YoutubeComp from './components/YoutubeComp/YoutubeComp';
+import Product from './container/produk/Product';
 
 
 
@@ -13,6 +14,8 @@ const  App = () => {
         <YoutubeComp time='21.2' title = "Belajar react Bagian 2"  desc ="1xxx ditonton 240 hari yang lalu"/>
         <YoutubeComp time='22.4' title = "Belajar react Bagian 4"  desc ="2jt ditonton 2 tahun yang lalu"/>
         <YoutubeComp />
+        <hr />
+        <Product />
       </div>
   );
 }
