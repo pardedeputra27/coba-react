@@ -1,7 +1,8 @@
 import React from "react";
+import BlogPost from "../API/BlogPost";
 // import YoutubeComp from "../../components/YoutubeComp/YoutubeComp";
 // import Product from "../produk/Product";
-import LifeCycleComp from "../lifeCycle/LifeCycleComp";
+//import LifeCycleComp from "../lifeCycle/LifeCycleComp";
 
 class Home extends React.Component{
     state = {
@@ -18,7 +19,7 @@ class Home extends React.Component{
     render (){
         return (
             <div>
-                {/* <h1>React Component</h1>
+            {/* <h1>React Component</h1>
                 <hr />
                 <YoutubeComp time='12.1'  title = "Belajar react Bagian 1"  desc ="1x ditonton 12 hari yang lalu" />
                 <YoutubeComp time='21.2' title = "Belajar react Bagian 2"  desc ="1xxx ditonton 240 hari yang lalu"/>
@@ -26,10 +27,14 @@ class Home extends React.Component{
                 <YoutubeComp />
                 <hr />
                 <Product />
-                <hr /> */}
+                <hr /> 
                 <h1>React LifeCyle</h1>
                 <hr />
-                 { this.state.showComponent && <LifeCycleComp /> }
+                 { this.state.showComponent && <LifeCycleComp /> } 
+            */}
+                <h1>React API</h1>
+                <hr />
+                <BlogPost />
             </div>
     
         );
