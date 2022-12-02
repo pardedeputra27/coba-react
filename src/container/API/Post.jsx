@@ -4,10 +4,8 @@ class Post extends React.Component{
     constructor(props){
         super(props);
         this.state ={
-            title:props.title,
-            desc:props.desc
+            data:props.data,
         }
-
     }
     render(){
         return(
@@ -16,9 +14,11 @@ class Post extends React.Component{
                     <img src="https://placeimg.com/200/150/tech" alt="" />
                 </div>
                 <div className="content">
-                    <p className="title">{this.state.title}</p>
-                    <p className="desc">{this.state.desc}</p>
+                    <p className="title">{this.state.data.title}</p>
+                    <p className="desc">{this.state.data.body}</p>
+                    <button className="remove" onClick={()=>this.props.remove(this.state.data.id)}>Remove</button>
                 </div>
+
             </div>
         )
     }

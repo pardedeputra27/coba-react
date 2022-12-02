@@ -6,7 +6,9 @@ import axios from "axios";
 class BlogPost extends React.Component{
     state ={
         post:[],
+        failed:true,
     }
+
     componentDidMount(){
     //     fetch('https://jsonplaceholder.typicode.com/posts')
     //     .then(response => response.json())
@@ -15,16 +17,26 @@ class BlogPost extends React.Component{
     //         console.log(json)
     //     })
     // );
+        this.renderAPI()
+    
+    }
 
-    axios.get('http://localhost:3001/posts')
-    .then((response)=> {
-        //console.log(response);
-        this.setState({
-            post:response.data,
-        })
-    })
+    renderAPI =()=>{
+        axios.get('http://localhost:3001/posts')
+        .then((response)=> {
+            //console.log(response);
+            this.setState({
+                post:response.data,
+                failed:false
+            })
+        })     
+    }
 
-      
+    handleRemove = (id) =>{
+            console.log('Deleted id = ',id);
+            axios.delete(`http://localhost:3001/posts/${id}`).then((result)=>{
+                this.renderAPI();
+            });
     }
     render(){
         return(
@@ -32,9 +44,9 @@ class BlogPost extends React.Component{
             <React.Fragment>
             <p className="section-title">Blog post</p>
             {
-            this.state.post.map((value,index,array)=>{
+            this.state.failed?<h5 className="section-title">Loading...</h5>:this.state.post.map((value,index,array)=>{
                 //console.log('value',value.id)
-                return <Post key={value.id} title = {value.title} desc = {value.body}/>
+                return <Post key={value.id} data={value} remove ={this.handleRemove} />
 
             })
             }
