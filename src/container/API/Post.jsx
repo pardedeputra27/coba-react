@@ -17,6 +17,7 @@ class Post extends React.Component{
                     <p className="title">{this.state.data.title}</p>
                     <p className="desc">{this.state.data.body}</p>
                     <button className="remove" onClick={()=>this.props.remove(this.state.data.id)}>Remove</button>
+                    <button className="update" onClick={()=>this.props.update(this.state.data)}>Update</button>
                 </div>
 
             </div>
